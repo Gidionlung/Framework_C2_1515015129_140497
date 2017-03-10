@@ -18,3 +18,10 @@ Route::get('/', function () {
 Route::get('public', function () {
     return ('Nama : Gidion lung Tumanan');
 });
+Route::get("pengguna/{pengguna}",function ($pengguna)
+{
+	return "Hallo world dari sayang $pengguna";
+});
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
